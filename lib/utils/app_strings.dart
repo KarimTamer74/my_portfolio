@@ -159,5 +159,5 @@ Features include onboarding screens, focus mode to minimize distractions, and lo
   static const String contactLinkedInTitle = 'LinkedIn';
   static const String contactLinkedInValue = 'linkedin.com/in/karim-tamer74';
   static const String contactLinkedInUrl =
-      'https://linkedin.com/in/karim-tamer74';
+      'https://www.linkedin.com/in/karim-tamer74/';
 }

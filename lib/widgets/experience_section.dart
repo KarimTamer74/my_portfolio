@@ -72,127 +72,163 @@ class _ExperienceSectionState extends State<ExperienceSection>
           _controller.reset();
         }
       },
-      child: Container(
-        width: double.infinity,
-        padding: const EdgeInsets.symmetric(vertical: 70, horizontal: 20),
-        decoration: BoxDecoration(
-          color:
-              isDarkMode ? AppColors.black.withOpacity(0.7) : AppColors.white,
-          borderRadius: BorderRadius.circular(16),
-          boxShadow: [
-            BoxShadow(
-              color: isDarkMode ? Colors.black26 : Colors.grey.withOpacity(0.2),
-              blurRadius: 12,
-              offset: const Offset(0, 6),
-            ),
-          ],
-        ),
-        child: Column(
-          children: [
-            Text(
-              AppStrings.sectionExperience,
-              style: AppStyles.s34W700.copyWith(
-                color:
-                    isDarkMode
-                        ? AppColors.primaryBlueDark
-                        : AppColors.primaryBlueLight,
-              ),
-            ),
-            const SizedBox(height: 24),
-
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Expanded(
-                  flex: 2,
-                  child: ConstrainedBox(
-                    constraints: const BoxConstraints(maxWidth: 800),
-                    child: ListView.separated(
-                      itemCount: jobs.length,
-                      shrinkWrap: true,
-                      physics: const NeverScrollableScrollPhysics(),
-                      separatorBuilder:
-                          (context, index) => const SizedBox(height: 30),
-                      itemBuilder: (context, index) {
-                        final animationInterval = index * 0.2;
-                        final fade = Tween(begin: 0.0, end: 1.0).animate(
-                          CurvedAnimation(
-                            parent: _controller,
-                            curve: Interval(
-                              animationInterval,
-                              1.0,
-                              curve: Curves.easeOut,
-                            ),
-                          ),
-                        );
-                        final slide = Tween<Offset>(
-                          begin: const Offset(-0.4, 0),
-                          end: Offset.zero,
-                        ).animate(
-                          CurvedAnimation(
-                            parent: _controller,
-                            curve: Interval(
-                              animationInterval,
-                              1.0,
-                              curve: Curves.easeOut,
-                            ),
-                          ),
-                        );
-
-                        return FadeTransition(
-                          opacity: fade,
-                          child: SlideTransition(
-                            position: slide,
-                            child: ExperienceCard(job: jobs[index]),
-                          ),
-                        );
-                      },
-                    ),
-                  ),
-                ),
-                // Expanded(
-                //   flex: 1,
-                //   child: Center(
-                //     child: Container(
-                //       width: 400, // تحديد عرض ثابت
-                //       height: 400, // تحديد ارتفاع ثابت ليصبح مربعا ثم دائرة
-                //       decoration: BoxDecoration(
-                //         color:
-                //             !isDarkMode
-                //                 ? AppColors.accentTeal.withOpacity(
-                //                   0.2,
-                //                 ) // لون خلفية دائرة في الوضع الداكن
-                //                 : AppColors.primaryBlueLight.withOpacity(
-                //                   0.1,
-                //                 ), // لون خلفية دائرة في الوضع الفاتح
-                //         shape: BoxShape.circle, // جعل الشكل دائريًا
-                //       ),
-                //       child: Lottie.asset(
-                //         "assets/lottie/experience3.json", // تأكد من استخدام اسم الملف الصحيح هنا
-                //         width: 350, // أصغر قليلاً من حجم الحاوية الدائرية
-                //         height: 350, // أصغر قليلاً
-                //         fit: BoxFit.contain,
-                //         repeat: true,
-                //       ),
-                //     ),
-                //   ),
-                // ),
-                Expanded(
-                  flex: 1,
-                  child: Center(
-                    child: Lottie.asset(
-                      AppAssets.experienceLottie,
-
-                      fit: BoxFit.contain,
-                      repeat: true,
-                    ),
-                  ),
+      child: LayoutBuilder(
+        builder: (context, constraints) {
+          final isMobile = constraints.maxWidth < 600;
+          return Container(
+            width: double.infinity,
+            padding: const EdgeInsets.symmetric(vertical: 70, horizontal: 20),
+            decoration: BoxDecoration(
+              color:
+                  isDarkMode
+                      ? AppColors.black.withOpacity(0.7)
+                      : AppColors.white,
+              borderRadius: BorderRadius.circular(16),
+              boxShadow: [
+                BoxShadow(
+                  color:
+                      isDarkMode
+                          ? Colors.black26
+                          : Colors.grey.withOpacity(0.2),
+                  blurRadius: 12,
+                  offset: const Offset(0, 6),
                 ),
               ],
             ),
-          ],
-        ),
+            child: Column(
+              children: [
+                Text(
+                  AppStrings.sectionExperience,
+                  style: AppStyles.s34W700.copyWith(
+                    color:
+                        isDarkMode
+                            ? AppColors.primaryBlueDark
+                            : AppColors.primaryBlueLight,
+                  ),
+                ),
+                const SizedBox(height: 24),
+                isMobile
+                    ? Column(
+                      children: [
+                        Lottie.asset(
+                          AppAssets.experienceLottie,
+                          height: 250,
+                          repeat: true,
+                          fit: BoxFit.contain,
+                        ),
+                        const SizedBox(height: 24),
+                        ListView.separated(
+                          itemCount: jobs.length,
+                          shrinkWrap: true,
+                          physics: const NeverScrollableScrollPhysics(),
+                          separatorBuilder:
+                              (context, index) => const SizedBox(height: 30),
+                          itemBuilder: (context, index) {
+                            final animationInterval = index * 0.2;
+                            final fade = Tween(begin: 0.0, end: 1.0).animate(
+                              CurvedAnimation(
+                                parent: _controller,
+                                curve: Interval(
+                                  animationInterval,
+                                  1.0,
+                                  curve: Curves.easeOut,
+                                ),
+                              ),
+                            );
+                            final slide = Tween<Offset>(
+                              begin: const Offset(-0.4, 0),
+                              end: Offset.zero,
+                            ).animate(
+                              CurvedAnimation(
+                                parent: _controller,
+                                curve: Interval(
+                                  animationInterval,
+                                  1.0,
+                                  curve: Curves.easeOut,
+                                ),
+                              ),
+                            );
+                            return FadeTransition(
+                              opacity: fade,
+                              child: SlideTransition(
+                                position: slide,
+                                child: ExperienceCard(job: jobs[index]),
+                              ),
+                            );
+                          },
+                        ),
+                      ],
+                    )
+                    : Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Expanded(
+                          flex: 2,
+                          child: ConstrainedBox(
+                            constraints: const BoxConstraints(maxWidth: 800),
+                            child: ListView.separated(
+                              itemCount: jobs.length,
+                              shrinkWrap: true,
+                              physics: const NeverScrollableScrollPhysics(),
+                              separatorBuilder:
+                                  (context, index) =>
+                                      const SizedBox(height: 30),
+                              itemBuilder: (context, index) {
+                                final animationInterval = index * 0.2;
+                                final fade = Tween(
+                                  begin: 0.0,
+                                  end: 1.0,
+                                ).animate(
+                                  CurvedAnimation(
+                                    parent: _controller,
+                                    curve: Interval(
+                                      animationInterval,
+                                      1.0,
+                                      curve: Curves.easeOut,
+                                    ),
+                                  ),
+                                );
+                                final slide = Tween<Offset>(
+                                  begin: const Offset(-0.4, 0),
+                                  end: Offset.zero,
+                                ).animate(
+                                  CurvedAnimation(
+                                    parent: _controller,
+                                    curve: Interval(
+                                      animationInterval,
+                                      1.0,
+                                      curve: Curves.easeOut,
+                                    ),
+                                  ),
+                                );
+                                return FadeTransition(
+                                  opacity: fade,
+                                  child: SlideTransition(
+                                    position: slide,
+                                    child: ExperienceCard(job: jobs[index]),
+                                  ),
+                                );
+                              },
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          flex: 1,
+                          child: Center(
+                            child: Lottie.asset(
+                              AppAssets.experienceLottie,
+                              fit: BoxFit.contain,
+                              repeat: true,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+              ],
+            ),
+          );
+        },
       ),
     );
   }

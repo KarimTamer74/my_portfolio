@@ -5,7 +5,7 @@ import 'package:my_portfolio/utils/app_styles.dart';
 
 class ExperienceCard extends StatelessWidget {
   final Job job;
-  const ExperienceCard({required this.job});
+  const ExperienceCard({super.key, required this.job});
 
   @override
   Widget build(BuildContext context) {
