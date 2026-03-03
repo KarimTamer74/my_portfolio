@@ -1,3 +1,4 @@
+// widgets/education_section.dart
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:my_portfolio/models/course.dart'; // Make sure you have this model
@@ -151,7 +152,7 @@ class _EducationSectionState extends State<EducationSection>
                         ),
                         const SizedBox(height: 30),
                         Text(
-                          AppStrings.courses,
+                          AppStrings.certificationsAndTraining,
                           // --- MODIFIED ---
                           style: AppStyles.s24W700.copyWith(
                             color: primaryColor,

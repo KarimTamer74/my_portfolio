@@ -1,3 +1,4 @@
+// utils/app_strings.dart
 class AppStrings {
   static const String appTitle = 'Karim Tamer Portfolio';
 
@@ -11,8 +12,7 @@ class AppStrings {
 
   // About Me
   static const String aboutMeSummary =
-      'A passionate Flutter Developer dedicated to crafting clean, responsive, and user-friendly mobile applications. '
-      'Eager to learn, grow, and contribute to innovative projects by building efficient and elegant solutions.';
+      'Junior Flutter Developer specializing in scalable, high-performance mobile applications using Flutter and Dart. Experienced in Clean Architecture, BLoC, Firebase, and RESTful API integration with a strong focus on clean, maintainable code. Currently a Flutter Instructor at NTI, delivering hands-on, industry-aligned development training.';
 
   static const String viewOnGitHub = 'View on GitHub';
   static const String viewOnDrive = 'View on Drive';
@@ -35,26 +35,77 @@ class AppStrings {
   static const String skillSolid = 'SOLID Principles';
 
   // Projects Info
+  static const String projectBidMartTitle = 'BidMart-App';
+  static const String projectBidMartDescription =
+      'BidMart is a Flutter-based real-time auction app enabling live bidding, secure payments, and instant notifications, built with Clean Architecture for scalability and maintainability.';
+  static const String projectBidMartLongDescription = '''
+🛍️ Developed a real-time auction app where users browse products, enroll, and place live bids.
+
+💳 Implemented secure payment flow with detailed product view and top bidders section.
+
+🏪 Enabled sellers to register, upload products, and manage auctions seamlessly.
+
+📡 Integrated real-time notifications for bidding activity, auction updates, and payment confirmations.''';
+
+  static const String projectJobTaskerTitle = 'JobTasker-App';
+  static const String projectJobTaskerDescription =
+      "Productivity-focused job application tracking app built with Clean Architecture and BLoC, helping users systematically manage applications, tasks, and focus sessions.";
+  static const String projectJobTaskerLongDescription = '''
+📊 Designed and developed a job application tracking system with integrated task management and Focus Mode to streamline productivity and job search workflows.
+
+🎯 Built intuitive UX for tracking job status, CV versions, job type, and work mode, managing the full lifecycle through Google Play deployment.
+
+⏰ Supports task creation with reminders and repeat intervals (daily, weekly, etc.).
+
+🔔 Integrated local notifications for upcoming task alerts.
+
+🧠 Includes a built-in Focus Mode to reduce distractions and enhance productivity.
+
+🏗️ Implemented structured state management using BLoC with scalable architecture design.
+
+🎨 Features a minimalistic UI with smooth navigation and responsive design.''';
+  
+  
   static const String projectMothooqTitle = 'Mothooq-App';
   static const String projectMothooqDescription =
       'A used car marketplace with Firebase Authentication, Realtime Database, BLoC, and role-based access.';
   static const String projectMothooqLongDescription = '''
-• Built a used car marketplace enabling listings post mandatory inspections at partner service centers.
-• Implemented role-based access for users and service centers.
-• Integrated Google Sign-In, responsive UI, and BLoC for state management.
-• Used Firebase Realtime Database for real-time data sync.''';
+🚘 Built a used car marketplace enabling listings after mandatory inspections at partner service centers.
 
-  static const String projectTaskifyTitle = 'Taskify-App';
-  static const String projectTaskifyDescription =
-      'A productivity ToDo app with Sqflite for local storage, MVVM architecture, and local notifications.';
-  static const String projectTaskifyLongDescription = '''
-• Smart and clean ToDo app focused on productivity and offline functionality.
-• Stores all data locally using Sqflite – no internet required.
-• Supports task creation with reminders and repeat intervals (daily, weekly, etc.).
-• Integrated local notifications to alert users about upcoming tasks.
-• Includes a built-in Focus Mode to reduce distractions and help users stay on track.
-• Built with MVVM architecture for maintainability and scalable code structure.
-• Features a minimalistic UI with smooth navigation and responsive design.''';
+🔐 Implemented role-based access for users and service centers.
+
+🔑 Integrated Google Sign-In with responsive UI and BLoC state management.
+
+🔄 Used Firebase Realtime Database for real-time data synchronization.''';
+
+//   static const String projectTaskifyTitle = 'Taskify-App';
+//   static const String projectTaskifyDescription =
+//       'A productivity ToDo app with Sqflite for local storage, MVVM architecture, and local notifications.';
+//   static const String projectTaskifyLongDescription = '''
+// • Smart and clean ToDo app focused on productivity and offline functionality.
+// • Stores all data locally using Sqflite – no internet required.
+// • Supports task creation with reminders and repeat intervals (daily, weekly, etc.).
+// • Integrated local notifications to alert users about upcoming tasks.
+// • Includes a built-in Focus Mode to reduce distractions and help users stay on track.
+// • Built with MVVM architecture for maintainability and scalable code structure.
+// • Features a minimalistic UI with smooth navigation and responsive design.''';
+
+  static const String projectPlayZoneTitle = 'PlayZone-App';
+  static const String projectPlayZoneDescription =
+      'Play Zone is a location-based stadium explorer designed to help users easily discover football fields in their area and navigate to them using an interactive map.The app focuses on simplicity, performance, and real-time location interaction.';
+  static const String projectPlayZoneLongDescription = '''
+⭐ Stadium Discovery – Browse curated football fields with name, rating, and address in a clean card-based UI.
+
+🔎 Smart Search – Instantly search and filter stadiums by name for fast access.
+
+🗺️ Interactive Map View – View stadium locations on Google Maps with markers for both the stadium and your current position.
+
+🧭 Route Drawing & Navigation – Generate routes between your location and the selected stadium with automatic camera animation and real-time tracking.
+
+📡 Live Location Tracking – Detect location service status, request permissions dynamically, and update user position while moving.
+
+🎯 Modern & Minimal UI – Clean, map-inspired design with smooth transitions and distraction-free experience.
+''';
 
   static const String projectChatbotTitle = 'Chatbot-App';
   static const String projectChatbotDescription =
@@ -78,12 +129,19 @@ Features include onboarding screens, focus mode to minimize distractions, and lo
 
   static const String projectNewsTitle = 'News-App';
   static const String projectNewsDescription =
-      'A simple news app for Flutter practice, fetching news from APIs.';
+      'News App is a modern Flutter application that delivers real-time headlines and categorized news using NewsAPI. Built with MVVM and BLoC (Cubit), it provides fast search, source filtering, and a clean, responsive user experience.';
   static const String projectNewsLongDescription = '''
-• Built as a Flutter practice project.
-• Displays news articles fetched from public APIs.
-• Clean UI with basic Flutter widgets.
-• Good practice for HTTP requests and JSON parsing.''';
+🔥 Trending News: Real-time top headlines.
+
+🔎 Smart Search: Fast article search by keywords.
+
+🗂️ Category Browsing: Explore news by category.
+
+📰 Article Details: Clean and readable article view.
+
+🌍 News Sources: Browse and filter news providers.
+
+📡 Live API Integration: Real-time data using NewsAPI with BLoC + MVVM architecture.''';
 
   // Project Tags
   static const String tagFlutter = 'Flutter';
@@ -97,6 +155,7 @@ Features include onboarding screens, focus mode to minimize distractions, and lo
   static const String tagFacebookSignIn = 'Facebook Sign-In';
   static const String tagSqflite = 'Sqflite';
   static const String tagLocalNotifications = 'Local Notifications';
+  static const String tagPushNotifications = 'Push Notifications';
   static const String tagFastlane = 'Fastlane';
   static const String tagShorebird = 'Shorebird';
   static const String tagGeminiAI = 'Gemini AI';
@@ -104,29 +163,49 @@ Features include onboarding screens, focus mode to minimize distractions, and lo
   static const String tagLocalization = 'Localization';
   static const String tagRestApi = 'REST API';
   static const String tagAnimations = 'Animations';
+  static const String tagHive = 'Hive';
+  static const String tagPagination = 'Pagination';
+  static const String tagCleanArchitecture = 'Clean Architecture';
+  static const String tagPaymentIntegration = 'Payment Integration';
+  static const String tagMapsIntegration = 'Maps Integration';
 
   // Courses Titles
+  static const String coursePaymentFlutter =
+      'Flutter Payment Integration: Stripe, PayPal & More';
+  static const String courseMapsFlutter =
+      'Flutter App Creation: Google Maps Integration Guide';
+  static const String courseCleanArchitectureFlutter =
+      'Deep Dive into Clean Architecture in Flutter';
   static const String courseResponsiveUi =
       'Mastering Flutter: Responsive & Adaptive UI Design';
   static const String courseBlocMvvm =
       'Flutter Advanced Course: BLoC and MVVM Pattern';
   static const String courseCompleteFlutter =
       'Complete Flutter & Dart Development Course';
+  static const String courseNtiFlutter =
+      'National Telecommunication Institute (NTI)';
 
   // Platforms
   static const String platformUdemy = 'Udemy';
 
   // Durations
-  static const String durationDec24ToJan25 = '12/2024 - 01/2025';
-  static const String durationJun24ToAug24 = '06/2024 - 08/2024';
-  static const String durationJan24ToMay24 = '01/2024 - 05/2024';
+  static const String durationOfPayment = '02/2026 - 03/2026';
+
+  static const String durationOfMaps = '01/2026 - 02/2026';
+  static const String durationOfCleanArchitecture = '11/2025';
+  static const String durationOfNti = '02/2025 - 03/2025';
+
+  static const String durationOfResponsive = '12/2024 - 01/2025';
+  static const String durationOfBlocMvvm = '06/2024 - 08/2024';
+  static const String durationOfCompleteFlutter = '01/2024 - 05/2024';
 
   // Education
   static const String educationDegree =
       'Bachelor of Engineering in Computer Engineering';
   static const String educationUniversity =
-      'Tanta University, Tanta, Egypt\n09/2020 - 07/2025\nCumulative Grade: 83.5%';
+      'Tanta University, Tanta, Egypt\n09/2020 - 07/2025\nCumulative Grade: 85% (Excellent)';
   static const String courses = 'Courses';
+  static const String certificationsAndTraining = 'Certifications & Training';
   // Contact / Links
   static const String linkedIn = 'LinkedIn';
   static const String contactGitHub = 'GitHub';

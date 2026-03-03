@@ -1,5 +1,5 @@
 class AppConstants {
-  static const String linkedInLink = 'https://linkedin.com/in/karim-tamer74';
+  static const String linkedInLink = 'https://linkedin.com/in/karim-tamer74/';
   static const String githubLink = '';
   static const String emailLink = 'mailto:';
   static const String phoneLink = '';

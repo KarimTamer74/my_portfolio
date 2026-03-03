@@ -1,3 +1,4 @@
+// widgets/experience_section.dart
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:my_portfolio/models/job.dart';
@@ -41,6 +42,16 @@ class _ExperienceSectionState extends State<ExperienceSection>
 
     final jobs = [
       Job(
+        position: 'Flutter Instructor',
+        company: 'National Telecommunication Institute (NTI)',
+        duration: 'Oct 2025 - Present',
+        responsibilities: [
+          'Delivered 90+ hours of hands-on Flutter training covering Dart, UI, BLoC, REST APIs, and MVVM.',
+          'Mentored trainees to build complete real-world Flutter applications.',
+          'Focused on clean code, scalable architecture, and best practices.',
+        ],
+      ),
+      Job(
         position: 'Freelance Flutter Developer',
         company: 'Mothooq-App',
         duration: 'March 2025 (2 weeks)',
@@ -51,16 +62,16 @@ class _ExperienceSectionState extends State<ExperienceSection>
           'Delivered MVP in 2 weeks with plans for future updates.',
         ],
       ),
-      Job(
-        position: 'Trainee Flutter Developer',
-        company: 'National Telecommunication Institute (NTI)',
-        duration: 'Feb 2025 - Mar 2025',
-        responsibilities: [
-          'Completed Flutter track covering Dart, REST APIs, and BLoC.',
-          'Built several apps during collaborative training sessions.',
-          'Gained hands-on experience with real-world team workflows.',
-        ],
-      ),
+      // Job(
+      //   position: 'Trainee Flutter Developer',
+      //   company: 'National Telecommunication Institute (NTI)',
+      //   duration: 'Feb 2025 - Mar 2025',
+      //   responsibilities: [
+      //     'Completed Flutter track covering Dart, REST APIs, and BLoC.',
+      //     'Built several apps during collaborative training sessions.',
+      //     'Gained hands-on experience with real-world team workflows.',
+      //   ],
+      // ),
     ];
 
     return VisibilityDetector(

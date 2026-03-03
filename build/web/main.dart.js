@@ -90991,7 +90991,7 @@ A.a6_.prototype={
 $0(){return A.oj(A.dQ("https://github.com/KarimTamer74",0,null),B.dF)},
 $S:0}
 A.a60.prototype={
-$0(){return A.oj(A.dQ("https://linkedin.com/in/karim-tamer74",0,null),B.dF)},
+$0(){return A.oj(A.dQ("https://linkedin.com/in/karim-tamer74/",0,null),B.dF)},
 $S:0}
 A.Bl.prototype={
 ai(){return new A.V1()}}

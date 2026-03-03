@@ -42,6 +42,10 @@ flutter:
     - assets/images/mothooq_shots/
     - assets/images/taskify_shots/
     - assets/images/chatbot_shots/
+    - assets/images/jobtasker_shots/
+    - assets/images/bidmart_shots/
+    - assets/images/playzone_shots/
+    - assets/images/news_shots/
     - assets/lottie/
 
  

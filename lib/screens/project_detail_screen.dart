@@ -1,3 +1,4 @@
+// screens/project_detail_screen.dart
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/gestures.dart'; // --- NEW: Import for custom scroll behavior
 import 'package:flutter/material.dart';
@@ -280,7 +281,7 @@ class _ProjectDetailScreenState extends State<ProjectDetailScreen> {
         Text(
           widget.project.longDescription,
           style: theme.textTheme.bodyLarge?.copyWith(
-            height: 1.6,
+            height: 1.4,
             fontSize: 16,
             color: isDarkMode ? Colors.grey[300] : Colors.grey[800],
           ),

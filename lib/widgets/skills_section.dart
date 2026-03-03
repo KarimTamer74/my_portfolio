@@ -1,3 +1,4 @@
+// widgets/skills_section.dart
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
@@ -37,38 +38,64 @@ class SkillsSection extends StatelessWidget {
       padding = const EdgeInsets.symmetric(horizontal: 20);
     }
     childAspectRatio = 1.2;
+    final skills = [
+      // ── Mobile Development ─────────────────────────────────────────
+      Skill(name: 'Flutter', icon: FontAwesomeIcons.mobileScreen),
+      Skill(name: 'Dart', icon: FontAwesomeIcons.code),
+      Skill(name: 'Responsive UI', icon: FontAwesomeIcons.mobileScreenButton),
+      Skill(name: 'Localization', icon: FontAwesomeIcons.language),
 
-    final List<Skill> skills = [
-      Skill(name: AppStrings.skillFlutter, icon: FontAwesomeIcons.mobileScreen),
-      Skill(name: AppStrings.skillDart, icon: FontAwesomeIcons.code),
-      Skill(name: AppStrings.skillBloc, icon: FontAwesomeIcons.diagramProject),
-      Skill(name: AppStrings.skillMVVM, icon: FontAwesomeIcons.layerGroup),
-      Skill(name: AppStrings.skillRestApi, icon: FontAwesomeIcons.server),
-      Skill(name: AppStrings.skillFirebase, icon: FontAwesomeIcons.fire),
-      Skill(name: AppStrings.skillFirestore, icon: FontAwesomeIcons.database),
+      // ── Architecture & State Management ────────────────────────────
       Skill(
-        name: AppStrings.skillSqflite,
-        icon: FontAwesomeIcons.solidHardDrive,
-      ),
+        name: 'Clean Architecture',
+        icon: FontAwesomeIcons.buildingColumns,
+      ), // ✅ valid
+      Skill(name: 'BLoC', icon: FontAwesomeIcons.diagramProject),
+      Skill(name: 'MVVM', icon: FontAwesomeIcons.layerGroup),
+      Skill(name: 'SOLID', icon: FontAwesomeIcons.cubes),
+      Skill(name: 'OOP', icon: FontAwesomeIcons.cube),
+
+      // ── Backend & APIs ─────────────────────────────────────────────
+      Skill(name: 'REST API', icon: FontAwesomeIcons.server),
+      Skill(name: 'Firebase', icon: FontAwesomeIcons.fire),
+      Skill(name: 'Firestore', icon: FontAwesomeIcons.database),
+      Skill(name: 'Supabase', icon: FontAwesomeIcons.bolt), // ✅ valid
       Skill(
-        name: AppStrings.skillShorebird,
-        icon: FontAwesomeIcons.cloudArrowUp,
-      ),
-      Skill(name: AppStrings.skillFastlane, icon: FontAwesomeIcons.rocket),
+        name: 'Payment Integration',
+        icon: FontAwesomeIcons.creditCard,
+      ), // ✅ valid
+      // ── Databases & Local Storage ──────────────────────────────────
       Skill(
-        name: AppStrings.skillResponsiveUi,
-        icon: FontAwesomeIcons.mobileScreenButton,
-      ),
+        name: 'Sqflite',
+        icon: FontAwesomeIcons.hardDrive,
+      ), // ✅ was: solidHardDrive (Pro only) → hardDrive
+      Skill(name: 'Hive', icon: FontAwesomeIcons.boxArchive), // ✅ valid
+      Skill(name: 'Shared Preferences', icon: FontAwesomeIcons.sliders),
       Skill(
-        name: AppStrings.skillLocalization,
-        icon: FontAwesomeIcons.language,
-      ),
-      Skill(name: AppStrings.skillGitAndGitHub, icon: FontAwesomeIcons.gitAlt),
-      Skill(name: AppStrings.skillSQL, icon: FontAwesomeIcons.database),
-      Skill(name: AppStrings.skillOop, icon: FontAwesomeIcons.cube),
-      Skill(name: AppStrings.skillSolid, icon: FontAwesomeIcons.cubes),
+        name: 'SQL',
+        icon: FontAwesomeIcons.table,
+      ), // ✅ was: tableColumns → table (simpler, free)
+      // ── Notifications & Maps ───────────────────────────────────────
+      Skill(
+        name: 'Local Notifications',
+        icon: FontAwesomeIcons.bell,
+      ), // ✅ valid
+      Skill(
+        name: 'Push Notifications',
+        icon: FontAwesomeIcons.solidBell,
+      ), // ✅ was: solidBell (Solid style prefix)
+      Skill(name: 'Google Maps', icon: FontAwesomeIcons.locationDot),
+
+      // ── DevOps & Version Control ───────────────────────────────────
+      Skill(name: 'Git & GitHub', icon: FontAwesomeIcons.gitAlt),
+      Skill(name: 'Fastlane', icon: FontAwesomeIcons.rocket),
+      Skill(name: 'Shorebird', icon: FontAwesomeIcons.cloudArrowUp),
+
+      // ── Core CS ────────────────────────────────────────────────────
+      Skill(name: 'Data Structures', icon: FontAwesomeIcons.sitemap),
+      Skill(name: 'Clean Code', icon: FontAwesomeIcons.fileCode),
+      Skill(name: 'Problem Solving', icon: FontAwesomeIcons.puzzlePiece),
     ];
-
     return Container(
       width: double.infinity,
       color: theme.scaffoldBackgroundColor,

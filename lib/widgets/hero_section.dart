@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:my_portfolio/utils/app_assets.dart';
 import 'package:my_portfolio/utils/app_colors.dart';
-import 'package:my_portfolio/utils/app_constants.dart';
 import 'package:my_portfolio/utils/app_strings.dart';
 import 'package:my_portfolio/utils/app_styles.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -120,7 +119,7 @@ class HeroSection extends StatelessWidget {
           ElevatedButton.icon(
             onPressed:
                 () => launchUrl(
-                  Uri.parse(AppConstants.linkedInLink),
+                  Uri.parse("https://linkedin.com/in/karim-tamer74/"),
                 ),
             icon: const FaIcon(
               FontAwesomeIcons.linkedinIn,
